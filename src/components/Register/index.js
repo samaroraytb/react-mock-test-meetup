@@ -69,11 +69,7 @@ const Register = props => (
       }
 
       const onChangeTopic = event => {
-        const filterTopicText = topicsList.filter(
-          each => each.id === event.target.value,
-        )
-
-        updateTopic(filterTopicText.pop().displayText)
+        updateTopic(event.target.value)
       }
 
       return (
